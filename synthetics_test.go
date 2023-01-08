@@ -1,13 +1,13 @@
 package test
 
 import (
-	"testing"
 	"context"
 	"encoding/json"
 	"fmt"
-	"os"
-	"math/big"
 	"log"
+	"math/big"
+	"os"
+	"testing"
 
 	"github.com/DataDog/datadog-api-client-go/v2/api/datadog"
 	"github.com/DataDog/datadog-api-client-go/v2/api/datadogV1"
@@ -35,7 +35,7 @@ func TestTerraformDataDogSyntheticExample(t *testing.T) {
 	// Convert synthetic-monitor-id float to Int64
 	flt, _, err := big.ParseFloat(output, 10, 0, big.ToNearestEven)
 	if err != nil {
-    /* handle a parsing error here */
+		/* handle any parsing errors here */
 	}
 	MonitorID, _ := flt.Int64()
 
